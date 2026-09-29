@@ -157,7 +157,7 @@
             </div>
             <h3 class="text-xl sm:text-2xl font-bold text-[#073733]">Abstrak Berhasil Disubmit!</h3>
             <p class="text-slate-600 text-xs sm:text-sm mt-2">
-                File PDF abstrak Anda telah berhasil masuk ke dalam Google Drive panitia dan email konfirmasi otomatis telah dikirimkan ke email ketua tim.
+                File PDF abstrak Anda telah berhasil terkirim dan email konfirmasi otomatis telah dikirimkan ke email ketua tim.
             </p>
             <button onclick="closeModal()" class="mt-6 w-full bg-[#073733] hover:bg-teal-900 text-white font-semibold py-3 rounded-xl transition shadow text-sm">
                 Tutup & Kembali
@@ -255,7 +255,7 @@
             const btn = document.getElementById('submitBtn');
             const originalText = btn.innerHTML;
             btn.disabled = true;
-            btn.innerHTML = '<span>Mengunggah file ke Google Drive...</span>';
+            btn.innerHTML = '<span>Mengunggah file...</span>';
 
             const formData = {
                 namaTim: document.getElementById('namaTim').value,
