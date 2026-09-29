@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Abstrak - FOSCA Impact Project (FIP) 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fip: {
+                            dark: '#073733',
+                            primary: '#0d4741',
+                            accent: '#0d9488',
+                            light: '#f0fdfa',
+                            border: '#ccfbf1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <header class="bg-[#073733] text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-xs sm:text-sm font-semibold text-teal-300">FOSCA Impact Project 2026</span>
+            </div>
+            <div class="text-right">
+                <span class="text-xs text-teal-200 block">Open Abstract Submission</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-b from-[#073733] to-[#0d4741] text-white py-8 sm:py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="bg-teal-800/80 text-teal-200 text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider border border-teal-600/50">
+                FIP 2026 RESEARCH COMPETITION
+            </span>
+            <h1 class="text-2xl sm:text-4xl font-bold mt-4 leading-tight">
+                Formulir Pengumpulan Abstrak Riset & KTI
+            </h1>
+            <p class="mt-3 text-teal-100/90 text-xs sm:text-base max-w-2xl mx-auto">
+                Tema: <em>"Empowering Young Researchers for Environmental Sustainability"</em>. Silakan lengkapi formulir di bawah ini dengan data yang valid.
+            </p>
+        </div>
+    </section>
+
+    <main class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10 w-full" id="form-section">
+        <div class="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-slate-200/80 overflow-hidden">
+            <div class="bg-[#073733] text-white px-6 sm:px-8 py-5 sm:py-6">
+                <h2 class="text-lg sm:text-xl font-bold">Data Tim & Unggah Dokumen</h2>
+                <p class="text-teal-200 text-xs mt-1">Pastikan file abstrak berformat PDF dan sesuai dengan ketentuan penulisan FIP 2026.</p>
+            </div>
+
+            <form id="abstractForm" class="p-5 sm:p-10 space-y-5 sm:space-y-6" onsubmit="handleFormSubmit(event)">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                    <!-- Nama TIM -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Nama TIM <span class="text-red-500">*</span></label>
+                        <input type="text" id="namaTim" required placeholder="Contoh: Tim Inovasi Hijau" 
+                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm">
+                    </div>
+
+                    <!-- Asal Sekolah -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Asal Sekolah <span class="text-red-500">*</span></label>
+                        <input type="text" id="asalSekolah" required placeholder="Contoh: SMAN 1 Jakarta" 
+                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                    <!-- Nama Ketua -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Nama Ketua <span class="text-red-500">*</span></label>
+                        <input type="text" id="namaKetua" required placeholder="Nama lengkap ketua" 
+                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm">
+                    </div>
+
+                    <!-- TIM Sekolah (TIM 1 or TIM 2) -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">TIM Sekolah <span class="text-red-500">*</span></label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button type="button" onclick="selectTeam('TIM 1')" id="btnTeam1" 
+                                class="py-3 px-4 rounded-xl border-2 font-semibold text-sm transition flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600">
+                                <span>TIM 1</span>
+                            </button>
+                            <button type="button" onclick="selectTeam('TIM 2')" id="btnTeam2" 
+                                class="py-3 px-4 rounded-xl border-2 font-semibold text-sm transition flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600">
+                                <span>TIM 2</span>
+                            </button>
+                        </div>
+                        <input type="hidden" id="pilihanTim" required>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                    <!-- Email Ketua -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Email Ketua <span class="text-red-500">*</span></label>
+                        <input type="email" id="emailKetua" required placeholder="ketua@email.com" 
+                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm">
+                        <p class="text-[11px] sm:text-xs text-slate-500 mt-1">Konfirmasi email dikirim otomatis ke alamat ini.</p>
+                    </div>
+
+                    <!-- Nomor Whatsapp Ketua -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Nomor Whatsapp Ketua <span class="text-red-500">*</span></label>
+                        <input type="tel" id="noWa" required placeholder="081234567890" 
+                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm">
+                    </div>
+                </div>
+
+                <!-- File Upload PDF directly to Drive Folder ID -->
+                <div>
+                    <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Link / Upload File Abstrak (Bentuk PDF) <span class="text-red-500">*</span></label>
+                    <div class="border-2 border-dashed border-slate-300 rounded-2xl p-5 sm:p-6 text-center hover:border-teal-600 transition bg-slate-50 relative">
+                        <input type="file" id="fileAbstract" accept=".pdf" required onchange="handleFileSelect(event)" 
+                            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+                        <div id="fileUploadPrompt" class="space-y-2 pointer-events-none">
+                            <svg class="w-10 h-10 text-teal-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                            <p class="text-xs sm:text-sm font-medium text-slate-700">Klik atau sentuh untuk memilih file PDF abstrak</p>
+                            <p class="text-[11px] sm:text-xs text-slate-500">Maksimal ukuran file 10MB (Format nama: NAMA SEKOLAH_ABSTRACT_KETUA TIM)</p>
+                        </div>
+                        <div id="fileInfoDisplay" class="hidden space-y-1 pointer-events-none">
+                            <svg class="w-10 h-10 text-emerald-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <p id="fileNameText" class="text-xs sm:text-sm font-bold text-slate-800 break-all"></p>
+                            <p class="text-[11px] sm:text-xs text-emerald-600 font-medium">File siap diunggah ke Google Drive panitia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <span class="text-[11px] sm:text-xs text-slate-500 text-center sm:text-left">* Pastikan seluruh data sudah benar sebelum mengirim.</span>
+                    <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-[#073733] hover:bg-teal-900 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
+                        <span>Kirim Abstrak Sekarang</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div id="successModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full text-center shadow-2xl animate-fade-in">
+            <div class="w-16 h-16 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-[#073733]">Abstrak Berhasil Disubmit!</h3>
+            <p class="text-slate-600 text-xs sm:text-sm mt-2">
+                File PDF abstrak Anda telah berhasil masuk ke dalam Google Drive panitia dan email konfirmasi otomatis telah dikirimkan ke email ketua tim.
+            </p>
+            <button onclick="closeModal()" class="mt-6 w-full bg-[#073733] hover:bg-teal-900 text-white font-semibold py-3 rounded-xl transition shadow text-sm">
+                Tutup & Kembali
+            </button>
+        </div>
+    </div>
+
+    <div id="customModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl">
+            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            </div>
+            <h3 id="modalTitle" class="text-lg font-bold text-slate-800">Perhatian</h3>
+            <p id="modalMessage" class="text-slate-600 text-xs sm:text-sm mt-2">Pesan informasi.</p>
+            <button onclick="closeCustomModal()" class="mt-5 w-full bg-[#073733] hover:bg-teal-900 text-white font-semibold py-2.5 rounded-xl transition text-sm">
+                Mengerti
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-[#073733] text-teal-200/80 text-[11px] sm:text-xs py-6 text-center border-t border-teal-900/50 mt-auto px-4">
+        <p>FOSCA IMPACT PROJECT (FIP) 2026 • Empowering Young Researchers for Environmental Sustainability</p>
+    </footer>
+
+    <script>
+        let selectedTeamValue = "";
+        let uploadedFileBase64 = null;
+        let uploadedFileName = null;
+        let uploadedFileType = null;
+
+        function showMessage(title, message) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalMessage').innerText = message;
+            document.getElementById('customModal').classList.remove('hidden');
+        }
+
+        function closeCustomModal() {
+            document.getElementById('customModal').classList.add('hidden');
+        }
+
+        function selectTeam(team) {
+            selectedTeamValue = team;
+            document.getElementById('pilihanTim').value = team;
+            
+            const btn1 = document.getElementById('btnTeam1');
+            const btn2 = document.getElementById('btnTeam2');
+            
+            if (team === 'TIM 1') {
+                btn1.className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition flex items-center justify-center space-x-2 border-teal-600 bg-teal-50 text-teal-900";
+                btn2.className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600";
+            } else {
+                btn2.className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition flex items-center justify-center space-x-2 border-teal-600 bg-teal-50 text-teal-900";
+                btn1.className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600";
+            }
+        }
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            if (file.type !== 'application/pdf') {
+                showMessage('Format Salah', 'Format file harus PDF!');
+                event.target.value = '';
+                return;
+            }
+
+            uploadedFileName = file.name;
+            uploadedFileType = file.type;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const base64String = e.target.result.split(',')[1];
+                uploadedFileBase64 = base64String;
+
+                document.getElementById('fileUploadPrompt').classList.add('hidden');
+                document.getElementById('fileNameText').innerText = file.name;
+                document.getElementById('fileInfoDisplay').classList.remove('hidden');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            if (!selectedTeamValue) {
+                showMessage('Pilihan Tim Kosong', 'Silakan pilih TIM 1 atau TIM 2 terlebih dahulu.');
+                return;
+            }
+
+            if (!uploadedFileBase64) {
+                showMessage('File Belum Diunggah', 'Silakan unggah file PDF abstrak.');
+                return;
+            }
+            
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<span>Mengunggah file ke Google Drive...</span>';
+
+            const formData = {
+                namaTim: document.getElementById('namaTim').value,
+                asalSekolah: document.getElementById('asalSekolah').value,
+                namaKetua: document.getElementById('namaKetua').value,
+                pilihanTim: selectedTeamValue,
+                emailKetua: document.getElementById('emailKetua').value,
+                noWa: document.getElementById('noWa').value,
+                fileName: uploadedFileName,
+                fileType: uploadedFileType,
+                fileData: uploadedFileBase64
+            };
+
+            // NOTE: Ganti dengan URL Web App dari Google Apps Script yang sudah Anda deploy
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxlXwP76Zc1dBjOZyo7lvFtK92YC1q-tNZBIXW4AUMGCCFZgfesN01RGfjiQNQnRV4T/exec';
+
+            if (scriptURL.includes('YOUR_GOOGLE')) {
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+                    document.getElementById('successModal').classList.remove('hidden');
+                    document.getElementById('abstractForm').reset();
+                    document.getElementById('fileUploadPrompt').classList.remove('hidden');
+                    document.getElementById('fileInfoDisplay').classList.add('hidden');
+                    selectedTeamValue = "";
+                    document.getElementById('btnTeam1').className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600";
+                    document.getElementById('btnTeam2').className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600";
+                }, 1200);
+                return;
+            }
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+                document.getElementById('successModal').classList.remove('hidden');
+                document.getElementById('abstractForm').reset();
+                document.getElementById('fileUploadPrompt').classList.remove('hidden');
+                document.getElementById('fileInfoDisplay').classList.add('hidden');
+            })
+            .catch(error => {
+                console.error('Error!', error);
+                showMessage('Kesalahan Pengiriman', 'Terjadi kesalahan saat mengirim data. Silakan coba lagi.');
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            });
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
