@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Submission Abstrak & Surat Orisinalitas - FIP 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -27,50 +27,51 @@
         }
     </script>
 </head>
-<body class="bg-gradient-to-br from-slate-50 via-teal-50/40 to-slate-100 text-slate-800 font-sans min-h-screen flex flex-col justify-center py-6 px-4 sm:px-6 antialiased">
+<body class="bg-gradient-to-br from-slate-900 via-[#073733] to-slate-900 text-slate-800 font-sans min-h-screen flex flex-col justify-center py-8 px-4 sm:px-6 antialiased">
 
     <main class="max-w-xl mx-auto w-full" id="form-section">
-        <div id="cardContainer" class="bg-white rounded-3xl shadow-2xl border border-slate-200/80 overflow-hidden transition-all duration-300">
+        <div id="cardContainer" class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden transition-all duration-500">
             
-            <div id="cardHeader" class="bg-[#073733] text-white px-6 sm:px-8 py-6 relative">
-                <span class="bg-teal-800/90 text-teal-200 text-[11px] font-semibold px-3 py-1 rounded-full uppercase tracking-widest border border-teal-600/50 inline-block mb-2">
+            <div id="cardHeader" class="bg-gradient-to-r from-[#073733] to-[#0d4741] text-white px-6 sm:px-10 py-8 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-teal-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                <span class="bg-teal-500/20 text-teal-200 text-[11px] font-bold px-3 py-1.5 rounded-full uppercase tracking-widest border border-teal-400/30 inline-block mb-3 shadow-sm">
                     FOSCA Impact Project 2026
                 </span>
-                <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">Formulir Pengumpulan Berkas Abstrak</h1>
-                <p class="text-teal-200 text-xs sm:text-sm mt-1">Lengkapi data tim dan unggah file PDF yang diperlukan dengan benar.</p>
+                <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Formulir Pengumpulan Berkas</h1>
+                <p class="text-teal-100/90 text-xs sm:text-sm mt-1.5 leading-relaxed">Lengkapi data tim dan unggah file PDF Abstrak serta Surat Orisinalitas dengan benar.</p>
             </div>
 
-            <div id="contentArea" class="p-6 sm:p-8">
-                <form id="abstractForm" class="space-y-5" onsubmit="handleFormSubmit(event)">
+            <div id="contentArea" class="p-6 sm:p-10">
+                <form id="abstractForm" class="space-y-6" onsubmit="handleFormSubmit(event)">
                     
                     <div class="group">
-                        <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Nama TIM <span class="text-red-500">*</span></label>
+                        <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Nama TIM <span class="text-teal-600">*</span></label>
                         <input type="text" id="namaTim" required placeholder="Contoh: Tim Inovasi Hijau" 
-                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
+                            class="w-full px-4 py-3.5 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm font-medium">
                     </div>
 
                     <div class="group">
-                        <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Asal Sekolah <span class="text-red-500">*</span></label>
+                        <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Asal Sekolah <span class="text-teal-600">*</span></label>
                         <input type="text" id="asalSekolah" required placeholder="Contoh: SMAN 1 Jakarta" 
-                            class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
+                            class="w-full px-4 py-3.5 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm font-medium">
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div class="group">
-                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Nama Ketua <span class="text-red-500">*</span></label>
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Nama Ketua <span class="text-teal-600">*</span></label>
                             <input type="text" id="namaKetua" required placeholder="Nama lengkap ketua" 
-                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
+                                class="w-full px-4 py-3.5 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm font-medium">
                         </div>
 
                         <div>
-                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">TIM Sekolah <span class="text-red-500">*</span></label>
-                            <div class="grid grid-cols-2 gap-2">
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">TIM Sekolah <span class="text-teal-600">*</span></label>
+                            <div class="grid grid-cols-2 gap-2.5">
                                 <button type="button" onclick="selectTeam('TIM 1')" id="btnTeam1" 
-                                    class="py-3 px-3 rounded-xl border-2 font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm">
+                                    class="py-3 px-3 rounded-2xl border-2 font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm">
                                     <span>TIM 1</span>
                                 </button>
                                 <button type="button" onclick="selectTeam('TIM 2')" id="btnTeam2" 
-                                    class="py-3 px-3 rounded-xl border-2 font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm">
+                                    class="py-3 px-3 rounded-2xl border-2 font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm">
                                     <span>TIM 2</span>
                                 </button>
                             </div>
@@ -78,55 +79,67 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div class="group">
-                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Email Ketua <span class="text-red-500">*</span></label>
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Email Ketua <span class="text-teal-600">*</span></label>
                             <input type="email" id="emailKetua" required placeholder="ketua@email.com" 
-                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
+                                class="w-full px-4 py-3.5 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm font-medium">
                         </div>
 
                         <div class="group">
-                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">No. Whatsapp Ketua <span class="text-red-500">*</span></label>
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">No. Whatsapp Ketua <span class="text-teal-600">*</span></label>
                             <input type="tel" id="noWa" required placeholder="081234567890" 
-                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
+                                class="w-full px-4 py-3.5 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm font-medium">
                         </div>
                     </div>
 
-                    <div class="space-y-1.5">
-                        <label class="block text-xs sm:text-sm font-bold text-slate-700">Upload File Abstrak (PDF) <span class="text-red-500">*</span></label>
-                        <div class="border-2 border-dashed border-slate-300 rounded-2xl p-4 text-center hover:border-teal-600 transition-all bg-slate-50/60 relative group cursor-pointer shadow-inner">
+                    <div class="space-y-2">
+                        <label class="block text-xs sm:text-sm font-bold text-slate-700">Upload File Abstrak (PDF) <span class="text-teal-600">*</span></label>
+                        <div id="abstractDropZone" class="border-2 border-dashed border-slate-300 rounded-2xl p-5 text-center hover:border-teal-600 hover:bg-teal-50/30 transition-all bg-slate-50/60 relative group cursor-pointer shadow-inner">
                             <input type="file" id="fileAbstract" accept=".pdf" required onchange="handleFileSelect(event, 'abstract')" 
                                 class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
-                            <div id="abstractPrompt" class="space-y-1 pointer-events-none">
+                            <div id="abstractPrompt" class="space-y-2 pointer-events-none">
+                                <div class="w-10 h-10 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center mx-auto shadow-sm">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                                </div>
                                 <p class="text-xs sm:text-sm font-semibold text-slate-700">Klik atau seret file PDF Abstrak ke sini</p>
                                 <p class="text-[11px] text-slate-500">Maksimal 10MB • Format: NAMA SEKOLAH_ABSTRACT_NAMA KETUA</p>
                             </div>
-                            <div id="abstractInfo" class="hidden space-y-1 pointer-events-none">
-                                <p id="abstractNameText" class="text-xs sm:text-sm font-bold text-slate-800 break-all"></p>
+                            <div id="abstractInfo" class="hidden space-y-1.5 pointer-events-none">
+                                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <p id="abstractNameText" class="text-xs sm:text-bold text-slate-800 break-all font-bold"></p>
                                 <p class="text-[11px] text-emerald-600 font-semibold">File Abstrak siap diunggah</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="space-y-1.5">
-                        <label class="block text-xs sm:text-sm font-bold text-slate-700">Upload Surat Orisinalitas Karya (PDF) <span class="text-red-500">*</span></label>
-                        <div class="border-2 border-dashed border-slate-300 rounded-2xl p-4 text-center hover:border-teal-600 transition-all bg-slate-50/60 relative group cursor-pointer shadow-inner">
+                    <div class="space-y-2">
+                        <label class="block text-xs sm:text-sm font-bold text-slate-700">Upload Surat Orisinalitas Karya (PDF) <span class="text-teal-600">*</span></label>
+                        <div id="letterDropZone" class="border-2 border-dashed border-slate-300 rounded-2xl p-5 text-center hover:border-teal-600 hover:bg-teal-50/30 transition-all bg-slate-50/60 relative group cursor-pointer shadow-inner">
                             <input type="file" id="fileLetter" accept=".pdf" required onchange="handleFileSelect(event, 'letter')" 
                                 class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
-                            <div id="letterPrompt" class="space-y-1 pointer-events-none">
+                            <div id="letterPrompt" class="space-y-2 pointer-events-none">
+                                <div class="w-10 h-10 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center mx-auto shadow-sm">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                                </div>
                                 <p class="text-xs sm:text-sm font-semibold text-slate-700">Klik atau seret Surat Orisinalitas PDF ke sini</p>
                                 <p class="text-[11px] text-slate-500">Maksimal 10MB • NAMA SEKOLAH_SO_NAMA KETUA</p>
                             </div>
-                            <div id="letterInfo" class="hidden space-y-1 pointer-events-none">
-                                <p id="letterNameText" class="text-xs sm:text-sm font-bold text-slate-800 break-all"></p>
+                            <div id="letterInfo" class="hidden space-y-1.5 pointer-events-none">
+                                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </div>
+                                <p id="letterNameText" class="text-xs sm:text-bold text-slate-800 break-all font-bold"></p>
                                 <p class="text-[11px] text-emerald-600 font-semibold">Surat Orisinalitas siap diunggah</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
-                        <span class="text-[11px] text-slate-500 text-center sm:text-left">Pastikan data & dokumen sudah benar.</span>
-                        <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-[#073733] hover:bg-teal-900 text-white font-bold px-6 py-3.5 rounded-2xl shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 text-sm">
+                    <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <span class="text-[11px] text-slate-500 text-center sm:text-left">Pastikan data & dokumen PDF sudah benar sebelum mengirim.</span>
+                        <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-gradient-to-r from-[#073733] to-[#0d4741] hover:from-teal-900 hover:to-teal-800 text-white font-bold px-8 py-4 rounded-2xl shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 text-sm tracking-wide">
                             <span>Kirim Berkas Sekarang</span>
                         </button>
                     </div>
@@ -135,11 +148,14 @@
         </div>
     </main>
 
-    <div id="customModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl">
+    <div id="customModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden animate-fadeIn">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-sm w-full text-center shadow-2xl border border-slate-100">
+            <div id="modalIconContainer" class="w-14 h-14 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg id="modalIcon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
             <h3 id="modalTitle" class="text-lg font-bold text-slate-800">Perhatian</h3>
             <p id="modalMessage" class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Pesan informasi.</p>
-            <button onclick="closeCustomModal()" class="mt-5 w-full bg-[#073733] hover:bg-teal-900 text-white font-bold py-2.5 rounded-xl transition-all shadow-md text-sm">
+            <button onclick="closeCustomModal()" class="mt-6 w-full bg-[#073733] hover:bg-teal-900 text-white font-bold py-3 rounded-2xl transition-all shadow-lg text-sm">
                 Mengerti
             </button>
         </div>
@@ -168,11 +184,11 @@
             const btn2 = document.getElementById('btnTeam2');
             
             if (team === 'TIM 1') {
-                btn1.className = "py-3 px-3 rounded-xl border-2 font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-teal-600 bg-teal-50 text-teal-900 shadow-md scale-[1.02]";
-                btn2.className = "py-3 px-3 rounded-xl border-2 font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm";
+                btn1.className = "py-3 px-3 rounded-2xl border-2 font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-teal-600 bg-teal-50 text-teal-900 shadow-md scale-[1.02]";
+                btn2.className = "py-3 px-3 rounded-2xl border-2 font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm";
             } else {
-                btn2.className = "py-3 px-3 rounded-xl border-2 font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-teal-600 bg-teal-50 text-teal-900 shadow-md scale-[1.02]";
-                btn1.className = "py-3 px-3 rounded-xl border-2 font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm";
+                btn2.className = "py-3 px-3 rounded-2xl border-2 font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-teal-600 bg-teal-50 text-teal-900 shadow-md scale-[1.02]";
+                btn1.className = "py-3 px-3 rounded-2xl border-2 font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm";
             }
         }
 
@@ -194,7 +210,7 @@
 
             const reader = new FileReader();
             reader.onload = function(e) {
-                const base64String = e.target.result.split(',')[1];
+                const base64String = e.target.result;
                 if (type === 'abstract') {
                     abstractBase64 = base64String;
                     abstractFileName = file.name;
@@ -202,6 +218,7 @@
                     document.getElementById('abstractPrompt').classList.add('hidden');
                     document.getElementById('abstractNameText').innerText = file.name;
                     document.getElementById('abstractInfo').classList.remove('hidden');
+                    document.getElementById('abstractDropZone').classList.add('border-emerald-500', 'bg-emerald-50/20');
                 } else if (type === 'letter') {
                     letterBase64 = base64String;
                     letterFileName = file.name;
@@ -209,6 +226,7 @@
                     document.getElementById('letterPrompt').classList.add('hidden');
                     document.getElementById('letterNameText').innerText = file.name;
                     document.getElementById('letterInfo').classList.remove('hidden');
+                    document.getElementById('letterDropZone').classList.add('border-emerald-500', 'bg-emerald-50/20');
                 }
             };
             reader.readAsDataURL(file);
@@ -230,7 +248,7 @@
             const btn = document.getElementById('submitBtn');
             const originalText = btn.innerHTML;
             btn.disabled = true;
-            btn.innerHTML = '<span>Mengirim Berkas...</span>';
+            btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg><span>Mengirim Berkas ke Sistem...</span>';
 
             const formData = {
                 namaTim: document.getElementById('namaTim').value,
@@ -248,12 +266,12 @@
             };
 
             // Masukkan URL Web App Google Apps Script Anda di sini
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzS-KdXuT696kHjyRcB6gngUxFIDP9O0XJuBHXrdgjcG882_mEh4M9khF8o8BlUn0bXOw/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyO8gHHzWZr5wJx43f2BJr4IvSZE3_6LbPldgOkGUYYuh4lODBDbTnkAV99gGvhDkzzjQ/exec';
 
             if (scriptURL.includes('YOUR_GOOGLE') || scriptURL === '') {
                 setTimeout(() => {
                     showSuccessState();
-                }, 1200);
+                }, 1500);
                 return;
             }
 
@@ -268,7 +286,7 @@
             })
             .catch(error => {
                 console.error('Error!', error);
-                showMessage('Kesalahan Pengiriman', 'Terjadi kesalahan saat mengirim data. Silakan periksa koneksi internet.');
+                showMessage('Kesalahan Pengiriman', 'Terjadi kesalahan saat mengirim data. Silakan periksa koneksi internet Anda.');
                 btn.disabled = false;
                 btn.innerHTML = originalText;
             });
@@ -277,19 +295,19 @@
         function showSuccessState() {
             const container = document.getElementById('cardContainer');
             container.innerHTML = `
-                <div class="text-center py-12 px-6 sm:px-10 space-y-5">
-                    <div class="w-20 h-20 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center mx-auto shadow-inner animate-bounce">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <div class="text-center py-16 px-6 sm:px-12 space-y-6">
+                    <div class="w-24 h-24 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto shadow-inner animate-bounce">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                     </div>
-                    <div class="space-y-2">
-                        <h3 class="text-2xl font-extrabold text-[#073733]">Berhasil Disubmit!</h3>
-                        <p class="text-slate-600 text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
-                            File PDF Abstrak dan Surat Orisinalitas Karya Anda telah berhasil tersimpan di sistem. Email konfirmasi otomatis telah dikirimkan ke email ketua tim.
+                    <div class="space-y-3">
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-[#073733]">Berhasil Disubmit!</h3>
+                        <p class="text-slate-600 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+                            File PDF Abstrak dan Surat Orisinalitas Karya Anda telah berhasil tersimpan di sistem panitia. Email konfirmasi otomatis juga telah dikirimkan ke email ketua tim.
                         </p>
                     </div>
                     <div class="pt-6 border-t border-slate-100">
-                        <p class="text-[11px] text-slate-400">Silakan muat ulang (refresh) halaman jika Anda ingin mengirimkan berkas baru.</p>
-                        <button onclick="window.location.reload()" class="mt-3 bg-[#073733] hover:bg-teal-900 text-white text-xs font-bold px-6 py-3 rounded-xl transition-all shadow-lg">
+                        <p class="text-[11px] text-slate-400">Formulir baru akan dimuat kembali jika halaman ini disegarkan (refresh).</p>
+                        <button onclick="window.location.reload()" class="mt-4 bg-[#073733] hover:bg-teal-900 text-white text-xs sm:text-sm font-bold px-8 py-3.5 rounded-2xl transition-all shadow-xl">
                             Kirim Berkas Lain
                         </button>
                     </div>
@@ -298,4 +316,4 @@
         }
     </script>
 </body>
-</html>
+</html>Furl
