@@ -27,76 +27,94 @@
         }
     </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col antialiased">
+<body class="bg-gradient-to-br from-slate-50 via-teal-50/30 to-slate-100 text-slate-800 font-sans min-h-screen flex flex-col antialiased">
 
-    <header class="bg-[#073733] text-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-end">
+    <header class="bg-[#073733] text-white shadow-lg sticky top-0 z-50 border-b border-teal-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-teal-800/80 flex items-center justify-center text-teal-300 shadow-inner border border-teal-600/30">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <div>
+                    <span class="text-xs sm:text-sm font-bold tracking-wide text-white block">FOSCA Impact Project 2026</span>
+                    <span class="text-[10px] sm:text-xs text-teal-300 font-medium">Research & KTI Competition</span>
+                </div>
+            </div>
             <div class="text-right">
-                <span class="text-xs sm:text-sm font-semibold text-teal-300">FOSCA Impact Project 2026</span>
-                <span class="text-[10px] sm:text-xs text-teal-200 block">Open Abstract Submission</span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-teal-800/70 text-teal-200 border border-teal-600/40">
+                    <span class="w-2 h-2 mr-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+                    Submission Active
+                </span>
             </div>
         </div>
     </header>
 
-    <section class="bg-gradient-to-b from-[#073733] to-[#0d4741] text-white py-8 sm:py-12 px-4 shadow-inner">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="bg-teal-800/80 text-teal-200 text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider border border-teal-600/50 shadow-sm">
-                FIP 2026 RESEARCH COMPETITION
+    <section class="bg-gradient-to-r from-[#073733] via-[#0d4741] to-[#073733] text-white py-10 sm:py-16 px-4 shadow-xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0d9488_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="bg-teal-800/90 text-teal-200 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest border border-teal-600/50 shadow-sm inline-block mb-3">
+                Official Abstract & Letter Drop
             </span>
-            <h1 class="text-2xl sm:text-4xl font-bold mt-4 leading-tight">
-                Formulir Pengumpulan Abstrak Riset & KTI
+            <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+                Formulir Pengumpulan Berkas FIP 2026
             </h1>
-            <p class="mt-3 text-teal-100/90 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed">
-                Tema: <em>"Empowering Young Researchers for Environmental Sustainability"</em>. Silakan lengkapi formulir di bawah ini dengan data yang valid.
+            <p class="mt-3 text-teal-100/90 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+                Silakan isi data tim dengan lengkap serta unggah file <strong>Abstrak PDF</strong> dan <strong>Surat Orisinalitas Karya PDF</strong> pada kolom yang disediakan.
             </p>
         </div>
     </section>
 
-    <main class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10 w-full" id="form-section">
-        <div id="cardContainer" class="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-slate-200/80 overflow-hidden transition-all duration-300">
-            <div id="cardHeader" class="bg-[#073733] text-white px-6 sm:px-8 py-5 sm:py-6">
+    <main class="flex-grow max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 w-full" id="form-section">
+        <div id="cardContainer" class="bg-white rounded-3xl shadow-2xl border border-slate-200/80 overflow-hidden transition-all duration-300">
+            <div id="cardHeader" class="bg-[#073733] text-white px-6 sm:px-10 py-6 sm:py-7 relative">
+                <div class="absolute right-6 top-1/2 -translate-y-1/2 opacity-10 hidden sm:block">
+                    <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                </div>
                 <h2 class="text-lg sm:text-xl font-bold flex items-center space-x-2">
-                    <span>Formulir Data Tim & Unggah Abstrak</span>
+                    <span>Data Tim & Unggah Dokumen</span>
                 </h2>
-                <p class="text-teal-200 text-xs mt-1">Pastikan file abstrak berformat PDF dan sesuai dengan ketentuan penulisan FIP 2026.</p>
+                <p class="text-teal-200 text-xs sm:text-sm mt-1">Pastikan seluruh data dan file berformat PDF sebelum menekan tombol kirim.</p>
             </div>
 
-            <div id="contentArea" class="p-5 sm:p-10">
-                <form id="abstractForm" class="space-y-5 sm:space-y-6" onsubmit="handleFormSubmit(event)">
+            <div id="contentArea" class="p-6 sm:p-10">
+                <form id="abstractForm" class="space-y-6 sm:space-y-7" onsubmit="handleFormSubmit(event)">
+                    
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                         <!-- Nama TIM -->
-                        <div>
-                            <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Nama TIM <span class="text-red-500">*</span></label>
+                        <div class="group">
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2 flex items-center justify-between">
+                                <span>Nama TIM <span class="text-red-500">*</span></span>
+                            </label>
                             <input type="text" id="namaTim" required placeholder="Contoh: Tim Inovasi Hijau" 
-                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white">
+                                class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
                         </div>
 
                         <!-- Asal Sekolah -->
-                        <div>
-                            <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Asal Sekolah <span class="text-red-500">*</span></label>
+                        <div class="group">
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Asal Sekolah <span class="text-red-500">*</span></label>
                             <input type="text" id="asalSekolah" required placeholder="Contoh: SMAN 1 Jakarta" 
-                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white">
+                                class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                         <!-- Nama Ketua -->
-                        <div>
-                            <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Nama Ketua <span class="text-red-500">*</span></label>
-                            <input type="text" id="namaKetua" required placeholder="Nama lengkap ketua" 
-                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white">
+                        <div class="group">
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Nama Ketua <span class="text-red-500">*</span></label>
+                            <input type="text" id="namaKetua" required placeholder="Nama lengkap ketua tim" 
+                                class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
                         </div>
 
-                        <!-- TIM Sekolah (TIM 1 or TIM 2) -->
+                        <!-- TIM Sekolah (Interactive Buttons) -->
                         <div>
-                            <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">TIM Sekolah <span class="text-red-500">*</span></label>
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">TIM Sekolah <span class="text-red-500">*</span></label>
                             <div class="grid grid-cols-2 gap-3">
                                 <button type="button" onclick="selectTeam('TIM 1')" id="btnTeam1" 
-                                    class="py-3 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-200 flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600 bg-white">
+                                    class="py-3.5 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-300 flex items-center justify-center space-x-2 border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm">
                                     <span>TIM 1</span>
                                 </button>
                                 <button type="button" onclick="selectTeam('TIM 2')" id="btnTeam2" 
-                                    class="py-3 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-200 flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600 bg-white">
+                                    class="py-3.5 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-300 flex items-center justify-center space-x-2 border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm">
                                     <span>TIM 2</span>
                                 </button>
                             </div>
@@ -106,48 +124,74 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                         <!-- Email Ketua -->
-                        <div>
-                            <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Email Ketua <span class="text-red-500">*</span></label>
+                        <div class="group">
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Email Ketua <span class="text-red-500">*</span></label>
                             <input type="email" id="emailKetua" required placeholder="ketua@email.com" 
-                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white">
-                            <p class="text-[11px] sm:text-xs text-slate-500 mt-1">Konfirmasi email dikirim otomatis ke alamat ini.</p>
+                                class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
+                            <p class="text-[11px] sm:text-xs text-slate-500 mt-1.5 flex items-center">
+                                <svg class="w-3.5 h-3.5 text-teal-600 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Notifikasi email & bukti submit dikirim otomatis ke sini.
+                            </p>
                         </div>
 
                         <!-- Nomor Whatsapp Ketua -->
-                        <div>
-                            <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Nomor Whatsapp Ketua <span class="text-red-500">*</span></label>
+                        <div class="group">
+                            <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-2">Nomor Whatsapp Ketua <span class="text-red-500">*</span></label>
                             <input type="tel" id="noWa" required placeholder="081234567890" 
-                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white">
+                                class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none transition text-sm bg-slate-50/50 hover:bg-white shadow-sm">
                         </div>
                     </div>
 
-                    <!-- File Upload PDF directly to Drive Folder ID -->
-                    <div>
-                        <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-2">Upload File Abstrak (Bentuk PDF) <span class="text-red-500">*</span></label>
-                        <div class="border-2 border-dashed border-slate-300 rounded-2xl p-6 sm:p-8 text-center hover:border-teal-600 transition bg-slate-50/50 relative group cursor-pointer">
-                            <input type="file" id="fileAbstract" accept=".pdf" required onchange="handleFileSelect(event)" 
+                    <!-- File Upload 1: Abstrak PDF -->
+                    <div class="space-y-2">
+                        <label class="block text-xs sm:text-sm font-bold text-slate-700">Upload File Abstrak (Format PDF) <span class="text-red-500">*</span></label>
+                        <div class="border-2 border-dashed border-slate-300 rounded-2xl p-6 sm:p-8 text-center hover:border-teal-600 transition-all bg-slate-50/60 relative group cursor-pointer shadow-inner">
+                            <input type="file" id="fileAbstract" accept=".pdf" required onchange="handleFileSelect(event, 'abstract')" 
                                 class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
-                            <div id="fileUploadPrompt" class="space-y-3 pointer-events-none">
-                                <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition">
+                            <div id="abstractPrompt" class="space-y-3 pointer-events-none">
+                                <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform shadow-sm">
                                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
                                 </div>
-                                <p class="text-xs sm:text-sm font-medium text-slate-700">Klik atau seret file PDF abstrak ke sini</p>
-                                <p class="text-[11px] sm:text-xs text-slate-500">Maksimal ukuran file 10MB (Format: NAMA SEKOLAH_ABSTRACT_KETUA TIM)</p>
+                                <p class="text-xs sm:text-sm font-semibold text-slate-700">Klik atau seret file PDF Abstrak ke sini</p>
+                                <p class="text-[11px] sm:text-xs text-slate-500">Maksimal 10MB • Format: NAMA SEKOLAH_ABSTRACT_KETUA TIM</p>
                             </div>
-                            <div id="fileInfoDisplay" class="hidden space-y-2 pointer-events-none">
-                                <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto">
+                            <div id="abstractInfo" class="hidden space-y-2 pointer-events-none">
+                                <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center mx-auto shadow-sm">
                                     <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 </div>
-                                <p id="fileNameText" class="text-xs sm:text-sm font-bold text-slate-800 break-all"></p>
-                                <p class="text-[11px] sm:text-xs text-emerald-600 font-medium">File siap diunggah ke sistem</p>
+                                <p id="abstractNameText" class="text-xs sm:text-sm font-bold text-slate-800 break-all"></p>
+                                <p class="text-[11px] sm:text-xs text-emerald-600 font-semibold">File Abstrak siap diunggah</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <span class="text-[11px] sm:text-xs text-slate-500 text-center sm:text-left">* Pastikan seluruh data sudah benar sebelum mengirim.</span>
-                        <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-[#073733] hover:bg-teal-900 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
-                            <span>Kirim Abstrak Sekarang</span>
+                    <!-- File Upload 2: Surat Orisinalitas Karya PDF -->
+                    <div class="space-y-2">
+                        <label class="block text-xs sm:text-sm font-bold text-slate-700">Upload Surat Orisinalitas Karya (Format PDF) <span class="text-red-500">*</span></label>
+                        <div class="border-2 border-dashed border-slate-300 rounded-2xl p-6 sm:p-8 text-center hover:border-teal-600 transition-all bg-slate-50/60 relative group cursor-pointer shadow-inner">
+                            <input type="file" id="fileLetter" accept=".pdf" required onchange="handleFileSelect(event, 'letter')" 
+                                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+                            <div id="letterPrompt" class="space-y-3 pointer-events-none">
+                                <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform shadow-sm">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                </div>
+                                <p class="text-xs sm:text-sm font-semibold text-slate-700">Klik atau seret Surat Orisinalitas PDF ke sini</p>
+                                <p class="text-[11px] sm:text-xs text-slate-500">Maksimal 10MB • Surat bertandatangan resmi</p>
+                            </div>
+                            <div id="letterInfo" class="hidden space-y-2 pointer-events-none">
+                                <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center mx-auto shadow-sm">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <p id="letterNameText" class="text-xs sm:text-sm font-bold text-slate-800 break-all"></p>
+                                <p class="text-[11px] sm:text-xs text-emerald-600 font-semibold">Surat Orisinalitas siap diunggah</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <span class="text-[11px] sm:text-xs text-slate-500 text-center sm:text-left">Pastikan seluruh data dan file PDF sudah benar sebelum mengirim.</span>
+                        <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-[#073733] hover:bg-teal-900 text-white font-bold px-8 py-4 rounded-2xl shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2">
+                            <span>Kirim Berkas Sekarang</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </button>
                     </div>
@@ -157,13 +201,13 @@
     </main>
 
     <div id="customModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl animate-in fade-in zoom-in duration-200">
-            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-sm w-full text-center shadow-2xl animate-in fade-in zoom-in duration-200">
+            <div id="modalIcon" class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
             </div>
             <h3 id="modalTitle" class="text-lg font-bold text-slate-800">Perhatian</h3>
-            <p id="modalMessage" class="text-slate-600 text-xs sm:text-sm mt-2">Pesan informasi.</p>
-            <button onclick="closeCustomModal()" class="mt-5 w-full bg-[#073733] hover:bg-teal-900 text-white font-semibold py-2.5 rounded-xl transition text-sm">
+            <p id="modalMessage" class="text-slate-600 text-xs sm:text-sm mt-2 leading-relaxed">Pesan informasi.</p>
+            <button onclick="closeCustomModal()" class="mt-6 w-full bg-[#073733] hover:bg-teal-900 text-white font-bold py-3 rounded-xl transition-all shadow-md text-sm">
                 Mengerti
             </button>
         </div>
@@ -175,9 +219,14 @@
 
     <script>
         let selectedTeamValue = "";
-        let uploadedFileBase64 = null;
-        let uploadedFileName = null;
-        let uploadedFileType = null;
+        
+        let abstractBase64 = null;
+        let abstractFileName = null;
+        let abstractFileType = null;
+
+        let letterBase64 = null;
+        let letterFileName = null;
+        let letterFileType = null;
 
         function showMessage(title, message) {
             document.getElementById('modalTitle').innerText = title;
@@ -197,20 +246,20 @@
             const btn2 = document.getElementById('btnTeam2');
             
             if (team === 'TIM 1') {
-                btn1.className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-200 flex items-center justify-center space-x-2 border-teal-600 bg-teal-50 text-teal-900 shadow-sm";
-                btn2.className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-200 flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600 bg-white";
+                btn1.className = "py-3.5 px-4 rounded-xl border-2 font-bold text-sm transition-all duration-300 flex items-center justify-center space-x-2 border-teal-600 bg-teal-50 text-teal-900 shadow-md scale-[1.02]";
+                btn2.className = "py-3.5 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-300 flex items-center justify-center space-x-2 border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm";
             } else {
-                btn2.className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-200 flex items-center justify-center space-x-2 border-teal-600 bg-teal-50 text-teal-900 shadow-sm";
-                btn1.className = "py-3 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-200 flex items-center justify-center space-x-2 border-slate-300 text-slate-700 hover:border-teal-600 bg-white";
+                btn2.className = "py-3.5 px-4 rounded-xl border-2 font-bold text-sm transition-all duration-300 flex items-center justify-center space-x-2 border-teal-600 bg-teal-50 text-teal-900 shadow-md scale-[1.02]";
+                btn1.className = "py-3.5 px-4 rounded-xl border-2 font-semibold text-sm transition-all duration-300 flex items-center justify-center space-x-2 border-slate-200 text-slate-700 hover:border-teal-600 bg-slate-50/50 shadow-sm";
             }
         }
 
-        function handleFileSelect(event) {
+        function handleFileSelect(event, type) {
             const file = event.target.files[0];
             if (!file) return;
 
             if (file.type !== 'application/pdf') {
-                showMessage('Format Salah', 'Format file harus berupa PDF!');
+                showMessage('Format Salah', 'Format file wajib berupa PDF!');
                 event.target.value = '';
                 return;
             }
@@ -221,17 +270,24 @@
                 return;
             }
 
-            uploadedFileName = file.name;
-            uploadedFileType = file.type;
-
             const reader = new FileReader();
             reader.onload = function(e) {
                 const base64String = e.target.result.split(',')[1];
-                uploadedFileBase64 = base64String;
-
-                document.getElementById('fileUploadPrompt').classList.add('hidden');
-                document.getElementById('fileNameText').innerText = file.name;
-                document.getElementById('fileInfoDisplay').classList.remove('hidden');
+                if (type === 'abstract') {
+                    abstractBase64 = base64String;
+                    abstractFileName = file.name;
+                    abstractFileType = file.type;
+                    document.getElementById('abstractPrompt').classList.add('hidden');
+                    document.getElementById('abstractNameText').innerText = file.name;
+                    document.getElementById('abstractInfo').classList.remove('hidden');
+                } else if (type === 'letter') {
+                    letterBase64 = base64String;
+                    letterFileName = file.name;
+                    letterFileType = file.type;
+                    document.getElementById('letterPrompt').classList.add('hidden');
+                    document.getElementById('letterNameText').innerText = file.name;
+                    document.getElementById('letterInfo').classList.remove('hidden');
+                }
             };
             reader.readAsDataURL(file);
         }
@@ -244,15 +300,20 @@
                 return;
             }
 
-            if (!uploadedFileBase64) {
-                showMessage('File Belum Diunggah', 'Silakan unggah file PDF abstrak.');
+            if (!abstractBase64) {
+                showMessage('Abstrak Belum Diunggah', 'Silakan unggah file PDF abstrak.');
+                return;
+            }
+
+            if (!letterBase64) {
+                showMessage('Surat Orisinalitas Belum Diunggah', 'Silakan unggah file PDF Surat Orisinalitas Karya.');
                 return;
             }
             
             const btn = document.getElementById('submitBtn');
             const originalText = btn.innerHTML;
             btn.disabled = true;
-            btn.innerHTML = '<span>Mengunggah file & mengirim...</span>';
+            btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg><span>Mengunggah & Mengirim...</span>';
 
             const formData = {
                 namaTim: document.getElementById('namaTim').value,
@@ -261,15 +322,18 @@
                 pilihanTim: selectedTeamValue,
                 emailKetua: document.getElementById('emailKetua').value,
                 noWa: document.getElementById('noWa').value,
-                fileName: uploadedFileName,
-                fileType: uploadedFileType,
-                fileData: uploadedFileBase64
+                abstractName: abstractFileName,
+                abstractType: abstractFileType,
+                abstractData: abstractBase64,
+                letterName: letterFileName,
+                letterType: letterFileType,
+                letterData: letterBase64
             };
 
             // Masukkan URL Web App Google Apps Script Anda di bawah ini
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzLnhQheThf6xsEHlIm4LGly515iGJhrI5toVXFRHLy2iA1zUMg9DLwSA5YFwwAggjm/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyYVgaPWggm0rqabyuAXWt40IfSHuWPXa6DTmqrngU6dygnNLyDeesjvdl03fMBn7eb/exec';
 
-            if (scriptURL.includes('YOUR_GOOGLE')) {
+            if (scriptURL.includes('YOUR_GOOGLE') || scriptURL === '') {
                 setTimeout(() => {
                     showSuccessState();
                 }, 1200);
@@ -296,20 +360,20 @@
         function showSuccessState() {
             const container = document.getElementById('cardContainer');
             container.innerHTML = `
-                <div class="text-center py-12 px-6 sm:px-10 space-y-6">
-                    <div class="w-20 h-20 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center mx-auto shadow-inner animate-bounce">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <div class="text-center py-16 px-6 sm:px-12 space-y-6">
+                    <div class="w-24 h-24 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center mx-auto shadow-inner animate-bounce">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     </div>
                     <div class="space-y-3">
-                        <h3 class="text-2xl sm:text-3xl font-bold text-[#073733]">Abstrak Berhasil Disubmit!</h3>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-[#073733]">Berhasil Disubmit!</h3>
                         <p class="text-slate-600 text-sm sm:text-base max-w-md mx-auto leading-relaxed">
-                            File PDF abstrak Anda telah berhasil terkirim dan tersimpan di system. Email konfirmasi otomatis juga telah dikirimkan ke email ketua tim.
+                            File PDF Abstrak dan Surat Orisinalitas Karya Anda telah berhasil tersimpan di sistem. Email konfirmasi otomatis telah dikirimkan ke email ketua tim.
                         </p>
                     </div>
-                    <div class="pt-6 border-t border-slate-100">
-                        <p class="text-xs text-slate-400">Silakan muat ulang (refresh) halaman jika Anda ingin mengirimkan abstrak baru.</p>
-                        <button onclick="window.location.reload()" class="mt-4 bg-[#073733] hover:bg-teal-900 text-white text-xs font-semibold px-6 py-2.5 rounded-xl transition shadow">
-                            Kirim Abstrak Lain
+                    <div class="pt-8 border-t border-slate-100">
+                        <p class="text-xs text-slate-400">Silakan muat ulang (refresh) halaman jika Anda ingin mengirimkan berkas baru.</p>
+                        <button onclick="window.location.reload()" class="mt-4 bg-[#073733] hover:bg-teal-900 text-white text-xs font-bold px-8 py-3.5 rounded-2xl transition-all shadow-lg">
+                            Kirim Berkas Lain
                         </button>
                     </div>
                 </div>
